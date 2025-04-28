@@ -32,6 +32,11 @@ int main() {
     // Asignamos memoria para el arreglo dinámico de empleados
     depto.empleados = (Empleado*)malloc(depto.num_empleados * sizeof(Empleado));
  
+    if (depto.empleados == NULL) { // Verifica si la memoria fue reservada correctamente
+          printf("Error, memoria no asignada\n");
+          exit(1); // Termina el programa si no se pudo reservar memoria
+     }
+     
     //Leemos los datos de los empleados
     for(int i = 0; i < depto.num_empleados; i++) {
         printf("Ingrese el nombre del empleado %d: ", i + 1);
