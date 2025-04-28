@@ -4,12 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Definimos la estructura Coche
 typedef struct Coche {
     char marca[20];
     char modelo[20];
     int year;
 } Coche;
 
+//Función para imprimir los datos del coche
 void imprimirCoche(Coche coche){
     printf("Marca: %s\n", coche.marca);
     printf("Modelo: %s\n", coche.modelo);
