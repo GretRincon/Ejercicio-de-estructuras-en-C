@@ -13,6 +13,7 @@ pacientes en específicos, y se actualiza la lista.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 typedef struct Paciente {
@@ -57,7 +58,7 @@ void eliminarPaciente(Paciente **inicio, char *nombre) {
 
     // Si el paciente no existe, imprime un mensaje y termina la función
     if (actual == NULL) {
-        printf("El paciente no existe\n");
+        printf("El paciente %s no existe\n", nombre);
         return;
     }
 
@@ -99,28 +100,41 @@ void liberarLista(Paciente *inicio) {
 int main() {
     // Creamos una lista vacía
     Paciente *inicio = NULL; 
+    char nombre[50], diagnostico[100];
+    int edad, prioridad;
+
     // Añadimos 10 pacientes con diferentes prioridades usando la función nuevoPaciente
-    nuevoPaciente(&inicio, "Juan Perez", 30, "Fiebre", 2);
-    nuevoPaciente(&inicio, "Maria Lopez", 25, "Fractura", 1);
-    nuevoPaciente(&inicio, "Peje Moreno", 40, "Dolor de cabeza", 3);
-    nuevoPaciente(&inicio, "Juana Banana", 22, "Resfriado", 2);
-    nuevoPaciente(&inicio, "Luis Ramirez", 35, "Cáncer", 1);
-    nuevoPaciente(&inicio, "Laura Martinez", 28, "Dolor de estómago", 2);
-    nuevoPaciente(&inicio, "Pedro Gonzalez", 50, "Infección", 1);
-    nuevoPaciente(&inicio, "Sofia Morales", 45, "Alergia", 3);
-    nuevoPaciente(&inicio, "Peña Nieto", 33, "Migraña", 2);
-    nuevoPaciente(&inicio, "Claudia Sheinbaum", 29, "Parto", 1);
+    printf("Ingrese los datos de 10 pacientes:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("Paciente %d:\n", i + 1);
+        printf("Nombre: ");
+        // Usamos " %[^\n]" para leer una línea completa con espacios
+        scanf(" %[^\n]", nombre);
+        printf("Edad: ");
+        scanf("%d", &edad);
+        printf("Diagnostico: ");
+        scanf(" %[^\n]", diagnostico);
+        printf("Prioridad (1-3): ");
+        scanf("%d", &prioridad);
+        printf("\n");
+        // Llama a la función nuevoPaciente para añadir el paciente a la lista
+        nuevoPaciente(&inicio, nombre, edad, diagnostico, prioridad);
+    }
 
     // Imprimimos la lista de pacientes
     printf("Lista de pacientes:\n");
     imprimirLista(inicio);
     printf("\n");
 
-    // Eliminaremos a 2 pacientes específicos de la lista
-    eliminarPaciente(&inicio, "Peje Moreno");
-    eliminarPaciente(&inicio, "Peña Nieto");
+      // Solicitamos eliminar a 2 pacientes específicos
+      for (int i = 0; i < 2; i++) {
+        printf("\nIngrese el nombre del paciente a eliminar (%d de 2): ", i + 1);
+        scanf(" %[^\n]", nombre);
+        eliminarPaciente(&inicio, nombre);
+    }
 
     // Imprimimos la lista actualizada
+    printf("\n");
     printf("Lista de pacientes actualizada:\n");
     imprimirLista(inicio);
 

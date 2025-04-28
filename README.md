@@ -32,3 +32,30 @@ Al eliminar cada libro el indice de cada libro se habrá movido de lugar, asegur
 ![Catalogo actualizado al eliminar 3 libros](capturas/resultadoFInal.png)
 
 
+## Ejercicio 7 Hospital
+Task: Crea un programa que simule la gestión de pacientes de un hospital, donde cada paciente tiene su nombre, edad, diagnóstico y priodidad (1-3, donde 1 es urgente).
+
+Se tienen las siguientes solucioens en el programa
+- **nuevoPaciente**: Añade un nuevo paciente al inicio de la lista. 
+- **eliminarPaciente**: Elimina un paciente en base a un nombre específico (que esté en la lista).
+- **imprimirLista**: Imprime la lista de pacientes.
+- **main**: Flujo principal del programa.
+
+  ### Ejercicio de ejecución: Se añaden 10 pacientes iniciales, se eliminan 2 pacientes específicos y se imprime la lista actualizada.
+Al ejecutar el código, lo primero que se solicita es la información de cada uno de los 10 pacientes, y se debe de rellenar tal que:
+- **Nombre**: Ingresa el nombre completo.
+- **Edad**: Ingresa un valor entero de la edad del paciente.
+- **Diagnóstico**: Describe el diagnóstico o enfermedad del paciente.
+- **Prioridad**: Indica la prioridad (del 1 al 3) del paciente.
+
+![Ingresamos 10 pacientes con sus datos](capturas/AgregarPacientes.png)
+<br>
+
+Una vez completados los datos de todos los pacientes, imprime la lista y el programa solicita el nombre de 2 pacientes a eliminar. Debes de escribir el nombre tal cual aparece en la lista, o de lo contrario te dirá que no existe el usuario.
+
+![Borramos a 2 personas](capturas/EliminarPacientes.png)
+<br>
+
+Al eliminar a un paciente, la lista enlazada se actualiza, e imprime en pantalla la nueva lista.
+![Lista Final](capturas/ListaFinal.png)
+<br>
