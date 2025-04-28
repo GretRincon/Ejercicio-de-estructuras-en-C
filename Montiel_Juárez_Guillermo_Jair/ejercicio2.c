@@ -1,4 +1,4 @@
-//Ejercicio 1 Guillermo Jair Montiel Juárez
+//Ejercicio 2 Guillermo Jair Montiel Juárez
 //Crea un arreglo de estructuras Producto (nombre, precio, cantidad) y calcula el valor total de inventario (0.5 pts.)
 
 #include <stdio.h>
