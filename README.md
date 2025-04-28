@@ -52,6 +52,7 @@ Al ejecutar el código, lo primero que se solicita es la información de cada un
 <br>
 
 Una vez completados los datos de todos los pacientes, imprime la lista y el programa solicita el nombre de 2 pacientes a eliminar. Debes de escribir el nombre tal cual aparece en la lista, o de lo contrario te dirá que no existe el usuario.
+Nota: En la captura sólo se meustran 3 pacientes para hacer más simple el ejemplo, pero el programa solicitará y mostrará a 10 pacientes en total.
 
 ![Borramos a 2 personas](capturas/EliminarPacientes.png)
 <br>

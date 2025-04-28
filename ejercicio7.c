@@ -105,7 +105,7 @@ int main() {
 
     // Añadimos 10 pacientes con diferentes prioridades usando la función nuevoPaciente
     printf("Ingrese los datos de 10 pacientes:\n");
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 10; i++) {
         printf("Paciente %d:\n", i + 1);
         printf("Nombre: ");
         // Usamos " %[^\n]" para leer una línea completa con espacios
